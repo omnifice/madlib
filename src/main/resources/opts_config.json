@@ -1,0 +1,6 @@
+[
+  {"short": "h", "long": "help", "hasArgs": false, "description": "Help"},
+  {"short": "j", "long": "json", "hasArgs": true, "description": "Input file containing a JSON array of words."},
+  {"short": "p", "long": "plaintext", "hasArgs": true, "description": "Input file containing plain text sentences and appropriate tokens."},
+  {"short": "o", "long": "output", "hasArgs": true, "description": "Output file for writing resulting MadLib to."}
+]

@@ -25,7 +25,7 @@
         <module name="madlib" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.5">
       <module name="madlib" target="1.5" />
     </bytecodeTargetLevel>
   </component>
