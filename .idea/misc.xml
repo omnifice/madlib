@@ -39,7 +39,10 @@
     </properties>
   </component>
   <component name="EntryPointsManager">
-    <entry_points version="2.0" />
+    <entry_points version="2.0">
+      <entry_point TYPE="method" FQNAME="com.thedogdidit.madlib.PhrasesReader.phrasesIterator phrasesIterator(java.lang.String[] newArray)" />
+      <entry_point TYPE="class" FQNAME="com.thedogdidit.madlib.PhrasesReader.phrasesIterator" />
+    </entry_points>
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">

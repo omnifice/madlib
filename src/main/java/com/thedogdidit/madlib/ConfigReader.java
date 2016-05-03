@@ -36,19 +36,25 @@ class ConfigReader {
 
 
     /**
-     * Process the JSON configuration file passed to the constructor.
+     * Getter for the configuration file options.
      *
-     * @return org.apache.commons.cli.Options built from the file values.
+     * @return Options
      */
-    public Options process() {
+    public Options options() {
+        return this.options;
+    }
+
+
+    /**
+     * Process the JSON configuration file passed to the constructor.
+     */
+    public void process() {
         if (loadJSONConfig()) {
             this.valid = true;
         }
         else {
             this.options.getOptions().clear();
         }
-
-        return this.options;
     }
 
 

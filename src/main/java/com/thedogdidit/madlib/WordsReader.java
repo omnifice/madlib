@@ -6,6 +6,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Random;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -37,21 +39,48 @@ class WordsReader {
 
 
     /**
-     * Process the JSON word file passed to the constructor.
+     * Provides a random word of passed type from the words list.
      *
-     * @return a HashMap of words, broken down by type (noun, verb, etc.).
+     * @param type Word type, e.g. verb, noun, adjective, etc.
+     * @return random word of type String.
      */
-    public HashMap<String, ArrayList<String>> process() {
+    public String randomWord(String type) {
+        if (words.get(type).isEmpty()) {
+            return "";
+        }
+        else {
+            ArrayList<String> ary = words.get(type);
+            Random rndm = new Random();
+
+            return ary.get(rndm.nextInt(ary.size()));
+        }
+    }
+
+
+    /**
+     * Getter for the words list.
+     *
+     * @return HashMap of words as HashMap<String, ArrayList<String>>
+     */
+    public HashMap<String, ArrayList<String>> words() {
+        return this.words;
+    }
+
+
+    /**
+     * Process the JSON word file passed to the constructor.
+     */
+    public void process() {
         // Check for valid file.
         try {
-            File fWord = new File(wordFile);
+            File fWord = new File(this.wordFile);
             if (fWord.exists()
                     && fWord.canRead()
                     && fWord.isFile()) {
                 this.wordFilePath = fWord.getAbsolutePath();
             }
             else {
-                System.err.println("Configuration file not found: " + wordFile);
+                System.err.println("JSON words file not found: " + this.wordFile);
                 System.exit(1);
             }
         }
@@ -60,15 +89,13 @@ class WordsReader {
             System.exit(1);
         }
 
+        // Call to read in the words file.
         if (loadWords()) {
             this.valid = true;
         }
         else {
-
             this.words.clear();
         }
-
-        return this.words;
     }
 
 
@@ -117,7 +144,7 @@ class WordsReader {
                 }
             }
 
-            return (count > 0);
+            return (count > 0); // Assume, or decide as bad, if no words.
         }
         catch (FileNotFoundException e) {
             e.printStackTrace();

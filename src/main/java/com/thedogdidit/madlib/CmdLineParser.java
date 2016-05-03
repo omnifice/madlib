@@ -28,6 +28,15 @@ class CmdLineParser {
 
 
     /**
+     * Get requested option value by name.
+     *
+     * @return option value or empty string if none.
+     */
+    public String option(String key) {
+        return (this.parsedOpts.get(key).isEmpty()) ? "" : this.parsedOpts.get(key);
+    }
+
+    /**
      * Return whether or not parsing the command line was good.
      *
      * @return Boolean
@@ -38,12 +47,20 @@ class CmdLineParser {
 
 
     /**
+     * Getter for the phrase read from the plain text file.
+     *
+     * @return phrases as List<String>
+     */
+    public HashMap<String, String> options() {
+        return this.parsedOpts;
+    }
+
+
+    /**
      * Parse command line arguments and load a HashMap with those needed elsewhere, as determined by the Options passed
      * via the constructor.
-     *
-     * @return HashMap
      */
-    public HashMap parse() {
+     public void parse() {
         CommandLineParser parser = new BasicParser();
         CommandLine cmd;
 
@@ -68,8 +85,6 @@ class CmdLineParser {
             System.out.println("Error parsing command line options.");
             displayHelp(); // Exits
         }
-
-        return this.parsedOpts;
     }
 
 
