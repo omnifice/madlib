@@ -23,39 +23,9 @@ import java.util.List;
 public class App {
 
     public static void main( String[] args ) {
-        final String CONFIG_FILE = "src/main/resources/opts_config.json";
-        File configFile;
-        String configFilePath = "";
-
-        // Check for valid CONFIG_FILE
-        try {
-            configFile = new File(CONFIG_FILE);
-            if (configFile.exists()
-                    && configFile.canRead()
-                    && configFile.isFile()) {
-                configFilePath = configFile.getAbsolutePath();
-            }
-            else {
-                System.err.println("Configuration file not found: " + CONFIG_FILE);
-                System.exit(1);
-            }
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-            System.exit(1);
-        }
-
-        // Use the ConfigReader to process the JSON configuration file.
-        ConfigReader cfgRdr = new ConfigReader(configFilePath);
-        cfgRdr.process();
-
-        if (! cfgRdr.isValid()) {
-            System.err.println("Invalid configuration file: " + CONFIG_FILE);
-            System.exit(1);
-        }
 
         // Parse the command line options.
-        CmdLineParser clp = new CmdLineParser(args, cfgRdr.options());
+        CmdLineParser clp = new CmdLineParser(args);
         clp.parse();
 
         // Problem with command line parsing...exit!
@@ -68,7 +38,6 @@ public class App {
         System.out.println("Reading JSON word list...");
         WordsReader wrdRdr = new WordsReader(clp.option("j"));
         wrdRdr.process();
-        //wordList = wrdRdr.words();
         if (! wrdRdr.isValid()) {
             System.err.println("Error reading JSON words file.");
             System.exit(1);
@@ -92,6 +61,8 @@ public class App {
 
         // Write the output plain text file.
         // Seems silly to put this in it's own class...
+        // NOTE- Overwrite existing...not bothering to check for existance, currently. I know this is unfriendly, but...
+        // TODO...make more friendly for overwrite/abort.
         try {
             //noinspection Since15
             Files.write(Paths.get(clp.option("o")), parsedPhrases);

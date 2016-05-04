@@ -10,7 +10,7 @@ import java.util.HashMap;
  */
 class CmdLineParser {
     private String[] args = null;
-    private final Options cfgOpts;
+    private final Options cfgOpts = new Options();
     private final HashMap<String, String> parsedOpts = new HashMap<String, String>();
     private Boolean valid = false;
 
@@ -19,11 +19,15 @@ class CmdLineParser {
      * Constructor
      *
      * @param args type String[] containing the command line arguments
-     * @param opts type org.apache.commons.cli.Options as built by caller
      */
-    public CmdLineParser(String[] args, Options opts) {
+    public CmdLineParser(String[] args) {
         this.args = args;
-        this.cfgOpts = opts;
+
+        // Build options.
+        cfgOpts.addOption("h", "help", false, "Show help.");
+        cfgOpts.addOption("j", "json", true, "Input file containing a JSON array of words.");
+        cfgOpts.addOption("p", "plaintext", true, "Input file containing plain text sentences and appropriate tokens.");
+        cfgOpts.addOption("o", "output", true, "Output file for writing resulting MadLib to.");
     }
 
 
