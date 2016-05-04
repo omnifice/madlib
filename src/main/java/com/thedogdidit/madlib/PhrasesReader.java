@@ -20,7 +20,7 @@ class PhrasesReader {
     private final static Charset ENCODING = StandardCharsets.UTF_8;
     private Path textFilePath;
 
-    
+
     /**
      * Constructor
      *

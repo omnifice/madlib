@@ -20,7 +20,7 @@ import java.util.List;
  * Usage: madlib -j words.json -p plaintext_phrases.txt -o output_file.txt
  *
  */
-public class App {
+public class madlib {
 
     public static void main( String[] args ) {
         final String CONFIG_FILE = "src/main/resources/opts_config.json";
