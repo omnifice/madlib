@@ -9,14 +9,12 @@ import java.io.IOException;
 
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.junit.Assert.*;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 /**
  * Test WordsReader
  */
 public class WordsReaderTest extends TestCase {
-    static WordsReader wordsRedr;
+    private static WordsReader wordsRedr;
 
     @Before
     public void setUp() throws Exception {

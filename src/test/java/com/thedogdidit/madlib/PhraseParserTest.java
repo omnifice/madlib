@@ -1,24 +1,20 @@
 package com.thedogdidit.madlib;
 
 import junit.framework.TestCase;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.junit.Assert.*;
-import static org.junit.Assert.assertEquals;
 
 /**
  * Test PhraseParser
  */
 public class PhraseParserTest extends TestCase {
-    static PhraseParser phrsParser;
+    private static PhraseParser phrsParser;
 
     @Before
     public void setUp() throws Exception {

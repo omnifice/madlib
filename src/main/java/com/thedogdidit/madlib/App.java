@@ -18,14 +18,16 @@ import java.util.List;
  * Command line options:
  *      -j,--json        wordslist.json
  *                          - JSON array in the format: [{"word": "watermelon", "type": "noun"}]
+ *                          - There is a file in src/main/resources/words.json for using with command line options in build/run
  *      -p.--plaintext   plaintext_phrases.txt
  *                          - Phrases containing tokens matching typ in JSON words, e.g: [name] wants a new [noun].
+ *                          - There is a file in src/main/resources/phrases.txt for using with command line options in build/run
  *      -o,--output      output_file.txt
  *                          - Name of the file for output of parsed results. NOTE - WILL BE OVERWRITTEN if exists.
  *      -h,--help        Display help
  *
  */
-public class App {
+class App {
 
     /**
      * Application main
@@ -175,7 +177,7 @@ public class App {
     /**
      * Celebrate. W00T! W00T! ;)
      */
-    void celebrate () {
+    private void celebrate() {
         System.out.println("\nEnjoy your madlib! :)");
     }
 

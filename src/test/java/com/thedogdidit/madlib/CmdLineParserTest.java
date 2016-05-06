@@ -12,8 +12,8 @@ import static org.junit.Assert.assertThat;
  * Test CmdLineParser
  */
 public class CmdLineParserTest extends TestCase {
-    static String[] args = {"-j", "words.json", "-p", "plain.txt", "-o", "outfile.txt"};
-    static CmdLineParser clp;
+    private static final String[] args = {"-j", "words.json", "-p", "plain.txt", "-o", "outfile.txt"};
+    private static CmdLineParser clp;
 
     @Before
     public void setUp() {

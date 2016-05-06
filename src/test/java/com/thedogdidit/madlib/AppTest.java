@@ -29,7 +29,7 @@ public class AppTest extends TestCase {
 
 
     // args for most tests.
-    static String[] args = {
+    private static final String[] args = {
             "-p", "target/test-classes/phrases.txt",
             "-j", "target/test-classes/words.json",
             "-o", "target/test-classes/outfile.txt"
@@ -69,7 +69,6 @@ public class AppTest extends TestCase {
         opts = ml.parseCommandLine(args);
 
         // Get word list from JSON file.
-        WordsReader wrdReader = ml.getWords(opts.get("j"));
         PhrasesReader phraseRdr = ml.getPhrases(opts.get("p"));
 
         assertFalse("PhrasesReader should contain phrases.", phraseRdr.phrases().isEmpty());

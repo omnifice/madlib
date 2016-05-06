@@ -81,7 +81,7 @@ class PhrasesReader {
      *
      * @return Boolean indicating good or bad loading of phrases file.
      */
-    private Boolean loadPhrases () throws IOException {
+    private Boolean loadPhrases () {
         try {
             // Assuming small files for this usage...
             //noinspection Since15

@@ -15,7 +15,7 @@ import static org.junit.Assert.assertThat;
  * Test PhrasesReader
  */
 public class PhrasesReaderTest extends TestCase {
-    static PhrasesReader phrsRdr;
+    private static PhrasesReader phrsRdr;
 
     @Before
     public void setUp() {
