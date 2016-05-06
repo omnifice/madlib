@@ -45,8 +45,8 @@ class WordsReader {
      * @return random word of type String.
      */
     public String randomWord(String type) {
-        if (words.get(type).isEmpty()) {
-            return "";
+        if (! words.containsKey(type) || words.get(type).isEmpty()) {
+            return type;
         }
         else {
             ArrayList<String> ary = words.get(type);
@@ -70,23 +70,17 @@ class WordsReader {
     /**
      * Process the JSON word file passed to the constructor.
      */
-    public void process() {
+    public void process() throws IOException {
         // Check for valid file.
-        try {
-            File fWord = new File(this.wordFile);
-            if (fWord.exists()
-                    && fWord.canRead()
-                    && fWord.isFile()) {
-                this.wordFilePath = fWord.getAbsolutePath();
-            }
-            else {
-                System.err.println("JSON words file not found: " + this.wordFile);
-                System.exit(1);
-            }
+        File fWord = new File(this.wordFile);
+        if (fWord.exists()
+                && fWord.canRead()
+                && fWord.isFile())
+        {
+            this.wordFilePath = fWord.getAbsolutePath();
         }
-        catch (Exception e) {
-            e.printStackTrace();
-            System.exit(1);
+        else {
+            throw new FileNotFoundException();
         }
 
         // Call to read in the words file.

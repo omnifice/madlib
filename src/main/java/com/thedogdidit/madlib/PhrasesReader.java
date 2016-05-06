@@ -44,25 +44,18 @@ class PhrasesReader {
     /**
      * Check, read, etc., the plain text file.
      */
-    public void process() {
+    public void process() throws IOException {
         // Check for valid file.
         // NOTE: Purposefully used a different method (Path, etc.) than in other classes just to try.
-        try {
-            Path path = Paths.get(this.textFile);
-            if (Files.exists(path)
-                    && Files.isRegularFile(path)
-                    && Files.isReadable(path))
-            {
-                this.textFilePath = path;
-            }
-            else {
-                System.err.println("Plain text file not found or not regular file: " + this.textFile);
-                System.exit(1);
-            }
+        Path path = Paths.get(this.textFile);
+        if (Files.exists(path)
+                && Files.isRegularFile(path)
+                && Files.isReadable(path))
+        {
+            this.textFilePath = path;
         }
-        catch (Exception e) {
-            e.printStackTrace();
-            System.exit(1);
+        else {
+            throw new FileNotFoundException();
         }
 
         // Call to read in the phrases file.
@@ -88,20 +81,14 @@ class PhrasesReader {
      *
      * @return Boolean indicating good or bad loading of phrases file.
      */
-    private Boolean loadPhrases() {
+    private Boolean loadPhrases () throws IOException {
         try {
             // Assuming small files for this usage...
             //noinspection Since15
             this.phrases = Files.readAllLines(this.textFilePath, ENCODING);
         }
-        catch (FileNotFoundException e) {
-            e.printStackTrace();
-            this.phrases.clear();
-            return false;
-        }
         catch (IOException e) {
             e.printStackTrace();
-            this.phrases.clear();
             return false;
         }
 

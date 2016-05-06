@@ -1,7 +1,15 @@
 package com.thedogdidit.madlib;
 
 /**
- * Created by omnifice on 5/5/16.
+ * Custom exception for when help is displayed.
  */
-public class HelpException {
+class HelpException extends Exception {
+    /**
+     * Help exception constructor
+     *
+     * @param message String describing the exception.
+     */
+    HelpException(String message) {
+        super(message);
+    }
 }

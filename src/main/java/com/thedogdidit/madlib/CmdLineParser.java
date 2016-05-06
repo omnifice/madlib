@@ -8,7 +8,7 @@ import java.util.HashMap;
  * Class to parse passed command line options and return necessary values.
  *
  */
-class CmdLineParser {
+ class CmdLineParser {
     private String[] args = null;
     private final Options cfgOpts = new Options();
     private final HashMap<String, String> parsedOpts = new HashMap<String, String>();
@@ -37,7 +37,7 @@ class CmdLineParser {
      * @return option value or empty string if none.
      */
     public String option(String key) {
-        return (this.parsedOpts.get(key).isEmpty()) ? "" : this.parsedOpts.get(key);
+        return (this.parsedOpts.isEmpty() || this.parsedOpts.get(key).isEmpty()) ? "" : this.parsedOpts.get(key);
     }
 
     /**
@@ -51,9 +51,9 @@ class CmdLineParser {
 
 
     /**
-     * Getter for the phrase read from the plain text file.
+     * Getter for the parsed options.
      *
-     * @return phrases as List<String>
+     * @return parsed options as HashMap<String, String>
      */
     public HashMap<String, String> options() {
         return this.parsedOpts;
@@ -63,8 +63,10 @@ class CmdLineParser {
     /**
      * Parse command line arguments and load a HashMap with those needed elsewhere, as determined by the Options passed
      * via the constructor.
+     *
+      * @throws HelpException Let the caller exit/handle as needed.
      */
-     public void parse() {
+    public void parse() throws HelpException {
         CommandLineParser parser = new BasicParser();
         CommandLine cmd;
 
@@ -72,11 +74,11 @@ class CmdLineParser {
             cmd = parser.parse(this.cfgOpts, this.args);
 
             if (cmd.hasOption("h")) {
-                displayHelp(); // Exits
+                displayHelp();
+                throw new HelpException("displayHelp() called.");
             }
 
             for (Object o1 : cfgOpts.getOptions()) {
-
                 Option o = (Option) o1;
                 if (cmd.hasOption(o.getOpt()) && !o.getOpt().equals("h")) {
                     this.parsedOpts.put(o.getOpt(), cmd.getOptionValue(o.getOpt()));
@@ -87,7 +89,9 @@ class CmdLineParser {
         }
         catch (ParseException e) {
             System.out.println("Error parsing command line options.");
-            displayHelp(); // Exits
+            displayHelp();
+
+            throw new HelpException("displayHelp() called.");
         }
     }
 
@@ -97,9 +101,6 @@ class CmdLineParser {
      */
     private void displayHelp() {
         HelpFormatter formatter = new HelpFormatter();
-
         formatter.printHelp("madlib", this.cfgOpts);
-
-        System.exit(0);
     }
 }

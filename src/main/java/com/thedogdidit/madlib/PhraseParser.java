@@ -33,6 +33,11 @@ class PhraseParser {
         List<String> parsedPhrases = new ArrayList<String>();
         Pattern pattern = Pattern.compile("\\[(.+?)\\]");
 
+        if (! wrdRdr.isValid()) {
+            //System.err.println("WordsReader object not valid in parsePhrases.");
+            return phrases; //TODO: Probably should raise some error and handle in caller...
+        }
+
         for (String line : phrases) {
             Matcher matcher = pattern.matcher(line);
             StringBuffer sb = new StringBuffer();
