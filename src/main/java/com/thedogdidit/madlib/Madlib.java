@@ -93,7 +93,7 @@ class App {
         try {
             wrdRdr.process();
         } catch (IOException e) {
-            System.err.println("Error reading JSON words file.");
+            System.err.println(wrdRdr.getReason());
             exit(1);
         }
 
@@ -114,9 +114,10 @@ class App {
         try {
             phraseRdr.process();
         } catch (FileNotFoundException e) {
-            System.out.println("File not found: " + fileName);
+            System.err.println(phraseRdr.getReason() + " " + fileName);
             exit(1);
         } catch (IOException e) {
+            System.err.println(phraseRdr.getReason() + " " + fileName);
             e.printStackTrace();
             exit(1);
         }
