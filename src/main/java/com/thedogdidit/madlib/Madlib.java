@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * madlib
+ * Madlib
  *
  * Accepts three command line parameters which indicate a JSON formatted word list, a plain text file of strings (the
  * story) which contains tokens indicating word types corresponding to those in the JSON file, and an output file name
@@ -27,7 +27,7 @@ import java.util.List;
  *      -h,--help        Display help
  *
  */
-class App {
+class Madlib {
 
     /**
      * Application main
@@ -35,7 +35,7 @@ class App {
      * @param args - Command line arguments...see above.
      */
     public static void main( String[] args ) {
-        App madlib = new App();
+        Madlib madlib = new Madlib();
 
         // Parse command line.
         HashMap<String, String> cmdOpts = madlib.parseCommandLine(args);

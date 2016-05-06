@@ -19,6 +19,7 @@ class PhrasesReader {
     private Boolean valid = false;
     private final static Charset ENCODING = StandardCharsets.UTF_8;
     private Path textFilePath;
+    private String reason;
 
 
     /**
@@ -42,6 +43,16 @@ class PhrasesReader {
 
 
     /**
+     * Getter for file action failures.
+     *
+     * @return String containing reason for failure.
+     */
+    public String getReason() {
+        return this.reason;
+    }
+
+
+    /**
      * Check, read, etc., the plain text file.
      */
     public void process() throws IOException {
@@ -55,6 +66,7 @@ class PhrasesReader {
             this.textFilePath = path;
         }
         else {
+            this.reason = "Phrases plain text file not found."; // Yeah, redundant...
             throw new FileNotFoundException();
         }
 
@@ -63,6 +75,7 @@ class PhrasesReader {
             this.valid = true;
         }
         else {
+            this.reason = "Error loading phrases plain text file.";
             this.phrases.clear();
         }
     }
@@ -88,6 +101,7 @@ class PhrasesReader {
             this.phrases = Files.readAllLines(this.textFilePath, ENCODING);
         }
         catch (IOException e) {
+            this.reason = "Error reading phrases plain text file.";
             e.printStackTrace();
             return false;
         }

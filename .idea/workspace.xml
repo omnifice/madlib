@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d75e699-87e0-4408-ae32-3b569b01ca8d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/MadlibTestSuite.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/Madlib.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/AppTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/MadlibTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/App.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/madlib.iml" afterPath="$PROJECT_DIR$/madlib.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/PhrasesReader.java" afterPath="$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/PhrasesReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/AppTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/AppTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/WordsReader.java" afterPath="$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/WordsReader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/CmdLineParserTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/CmdLineParserTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/HelpExceptionTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/HelpExceptionTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/PhraseParserTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/PhraseParserTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/PhrasesReaderTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/PhrasesReaderTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/WordsReaderTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/WordsReaderTest.java" />
@@ -27,7 +32,7 @@
     <SUITE FILE_PATH="coverage/madlib$AppTest_testGetWords.coverage" NAME="AppTest.testGetWords Coverage Results" MODIFIED="1462499124472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.thedogdidit.madlib.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/madlib$All_in_madlib.coverage" NAME="All in madlib Coverage Results" MODIFIED="1462503711100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/madlib$All_in_madlib.coverage" NAME="All in madlib Coverage Results" MODIFIED="1462506721230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/madlib$AppTest_testWriteMadlib.coverage" NAME="AppTest.testWriteMadlib Coverage Results" MODIFIED="1462499276459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.thedogdidit.madlib.*</FILTER>
     </SUITE>
@@ -45,6 +50,9 @@
       <FILTER>com.thedogdidit.madlib.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/madlib$AppTest_testParseCommandLine.coverage" NAME="AppTest.testParseCommandLine Coverage Results" MODIFIED="1462499105595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.thedogdidit.madlib.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/madlib$MadlibTestSuite.coverage" NAME="MadlibTestSuite Coverage Results" MODIFIED="1462573794100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.thedogdidit.madlib.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/madlib$AppTest_testGetPhrases.coverage" NAME="AppTest.testGetPhrases Coverage Results" MODIFIED="1462499132217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -80,15 +88,54 @@
     <favorites_list name="madlib" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="519">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MadlibTestSuite.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/MadlibTestSuite.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MadlibTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/MadlibTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#795#796#0" expanded="true" />
+                <element signature="e#832#833#0" expanded="true" />
+                <element signature="e#914#915#0" expanded="true" />
+                <element signature="e#997#998#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Singleton" />
         <option value="JUnit3 Test Class" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -128,20 +175,23 @@
         <option value="$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/TextFileReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/ConfigReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/madlib.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/HelpException.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/HelpExceptionTest.java" />
         <option value="$PROJECT_DIR$/src/test/resources/words_short.json" />
-        <option value="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/WordsReaderTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/WordsReader.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/PhrasesReaderTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/PhraseParser.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/PhraseParserTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/CmdLineParser.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/CmdLineParserTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/AppTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/WordsReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/PhrasesReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/App.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/AppTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/Madlib.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/HelpExceptionTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/MadlibTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/CmdLineParserTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/PhraseParserTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/PhrasesReaderTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/WordsReaderTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/MadlibTestSuite.java" />
       </list>
     </option>
   </component>
@@ -213,6 +263,16 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Tests">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -242,11 +302,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="madlib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="madlib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -293,6 +371,10 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -318,16 +400,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="madlib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Tests">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -359,8 +431,8 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.madlib">
-    <configuration default="false" name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.MadlibTestSuite">
+    <configuration default="false" name="CmdLineParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.thedogdidit.madlib.*" />
@@ -371,7 +443,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.thedogdidit.madlib" />
-      <option name="MAIN_CLASS_NAME" value="com.thedogdidit.madlib.AppTest" />
+      <option name="MAIN_CLASS_NAME" value="com.thedogdidit.madlib.CmdLineParserTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -386,18 +458,23 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="All in madlib" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="false" name="PhraseParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.thedogdidit.madlib.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <module name="madlib" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="PACKAGE_NAME" value="com.thedogdidit.madlib" />
+      <option name="MAIN_CLASS_NAME" value="com.thedogdidit.madlib.PhraseParserTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -407,76 +484,82 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="madlib [verify]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="verify" />
-              </list>
-            </option>
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
+    <configuration default="false" name="PhrasesReaderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.thedogdidit.madlib.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="madlib" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.thedogdidit.madlib" />
+      <option name="MAIN_CLASS_NAME" value="com.thedogdidit.madlib.PhrasesReaderTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="madlib [install]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="install" />
-              </list>
-            </option>
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
+    <configuration default="false" name="WordsReaderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.thedogdidit.madlib.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="madlib" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.thedogdidit.madlib" />
+      <option name="MAIN_CLASS_NAME" value="com.thedogdidit.madlib.WordsReaderTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="madlib [clean]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="clean" />
-              </list>
-            </option>
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
+    <configuration default="false" name="MadlibTestSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.thedogdidit.madlib.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="madlib" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.thedogdidit.madlib" />
+      <option name="MAIN_CLASS_NAME" value="com.thedogdidit.madlib.MadlibTestSuite" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -791,9 +874,9 @@
     </configuration>
     <configuration default="false" name="madlib" type="Application" factoryName="Application" singleton="true" show_console_on_std_out="true" show_console_on_std_err="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="com.thedogdidit.madlib.App" />
+      <option name="MAIN_CLASS_NAME" value="com.thedogdidit.madlib.Madlib" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="--json src/main/resources/words.json --plaintext  src/main/resources/phrases.txt -o outfile.txt" />
+      <option name="PROGRAM_PARAMETERS" value="--json src/main/resources/madlib_words.json --plaintext  src/main/resources/madlib_phrases.txt -o outfile.txt" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -866,19 +949,19 @@
       <item index="1" class="java.lang.String" itemvalue="Groovy.groovy_console" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.com.thedogdidit.madlib" />
       <item index="3" class="java.lang.String" itemvalue="Maven.Unnamed" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.AppTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.All in madlib" />
-      <item index="6" class="java.lang.String" itemvalue="Maven.madlib [verify]" />
-      <item index="7" class="java.lang.String" itemvalue="Maven.madlib [install]" />
-      <item index="8" class="java.lang.String" itemvalue="Maven.madlib [clean]" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.CmdLineParserTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.PhraseParserTest" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.PhrasesReaderTest" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.WordsReaderTest" />
+      <item index="8" class="java.lang.String" itemvalue="JUnit.MadlibTestSuite" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.AppTest" />
-        <item index="1" class="java.lang.String" itemvalue="Maven.madlib [clean]" />
-        <item index="2" class="java.lang.String" itemvalue="Maven.madlib [verify]" />
-        <item index="3" class="java.lang.String" itemvalue="Maven.madlib [install]" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.All in madlib" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.MadlibTestSuite" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.WordsReaderTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.PhrasesReaderTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.PhraseParserTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.CmdLineParserTest" />
       </list>
     </recent_temporary>
   </component>
@@ -901,35 +984,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AppTest - 2016.05.05 at 21h 02m 21s.xml">
-      <configuration name="AppTest" configurationId="JUnit" />
+    <history-entry file="CmdLineParserTest - 2016.05.06 at 16h 22m 38s.xml">
+      <configuration name="CmdLineParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest - 2016.05.05 at 21h 03m 52s.xml">
-      <configuration name="AppTest" configurationId="JUnit" />
+    <history-entry file="HelpExceptionTest - 2016.05.06 at 16h 18m 10s.xml">
+      <configuration name="HelpExceptionTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest - 2016.05.05 at 21h 42m 03s.xml">
-      <configuration name="AppTest" configurationId="JUnit" />
+    <history-entry file="HelpExceptionTest - 2016.05.06 at 16h 20m 40s.xml">
+      <configuration name="HelpExceptionTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="com_thedogdidit_madlib - 2016.05.05 at 20h 58m 27s.xml">
-      <configuration name="com.thedogdidit.madlib" configurationId="JUnit" />
+    <history-entry file="HelpExceptionTest - 2016.05.06 at 16h 21m 04s.xml">
+      <configuration name="HelpExceptionTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="com_thedogdidit_madlib - 2016.05.05 at 21h 04m 17s.xml">
-      <configuration name="com.thedogdidit.madlib" configurationId="JUnit" />
+    <history-entry file="MadlibTest - 2016.05.06 at 16h 21m 14s.xml">
+      <configuration name="MadlibTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="com_thedogdidit_madlib - 2016.05.05 at 21h 06m 12s.xml">
-      <configuration name="com.thedogdidit.madlib" configurationId="JUnit" />
+    <history-entry file="MadlibTestSuite - 2016.05.06 at 16h 11m 30s.xml">
+      <configuration name="MadlibTestSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="com_thedogdidit_madlib - 2016.05.05 at 21h 06m 59s.xml">
-      <configuration name="com.thedogdidit.madlib" configurationId="JUnit" />
+    <history-entry file="MadlibTestSuite - 2016.05.06 at 16h 29m 54s.xml">
+      <configuration name="MadlibTestSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="com_thedogdidit_madlib - 2016.05.05 at 21h 07m 55s.xml">
-      <configuration name="com.thedogdidit.madlib" configurationId="JUnit" />
+    <history-entry file="PhraseParserTest - 2016.05.06 at 16h 24m 35s.xml">
+      <configuration name="PhraseParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="com_thedogdidit_madlib - 2016.05.05 at 21h 41m 27s.xml">
-      <configuration name="com.thedogdidit.madlib" configurationId="JUnit" />
+    <history-entry file="PhrasesReaderTest - 2016.05.06 at 16h 26m 36s.xml">
+      <configuration name="PhrasesReaderTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="com_thedogdidit_madlib_in_madlib - 2016.05.05 at 21h 07m 28s.xml">
-      <configuration name="com.thedogdidit.madlib in madlib" configurationId="JUnit" />
+    <history-entry file="WordsReaderTest - 2016.05.06 at 16h 28m 51s.xml">
+      <configuration name="WordsReaderTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -943,7 +1026,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="2106" y="0" width="1506" height="1068" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.49176955" order="6" side_tool="false" content_ui="tabs" />
@@ -952,11 +1035,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27173913" sideWeight="0.5301783" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33813444" sideWeight="0.46504065" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27173913" sideWeight="0.46982166" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27173913" sideWeight="0.46982166" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.49451303" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33152175" sideWeight="0.45541838" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33813444" sideWeight="0.5349594" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.45541838" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33813444" sideWeight="0.5349594" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.49725652" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.49725652" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23662551" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -969,7 +1053,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.49725652" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
@@ -1023,28 +1106,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/CmdLineParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1434#1450#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/PhrasesReaderTestBAK.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/AppTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/App.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/Madlib.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
@@ -1064,7 +1126,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1434#1450#0" expanded="true" />
+            <element signature="e#1315#1331#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1091,8 +1153,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/AppTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/App.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/MadlibTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/Madlib.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1114,8 +1176,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/AppTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/App.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/MadlibTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/Madlib.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
@@ -1130,8 +1192,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/AppTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/App.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/MadlibTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/Madlib.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1146,8 +1208,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/AppTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/App.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/MadlibTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/Madlib.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1211,64 +1273,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/WordsReaderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/WordsReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/PhraseParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/PhrasesReaderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/HelpExceptionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/PhraseParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/outfile.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/HelpException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1277,26 +1281,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/madlib_words.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/madlib_phrases.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outfile.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/CmdLineParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="77" column="32" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/PhraseParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-154">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/test-classes/outfile.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/Madlib.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/PhrasesReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="83" column="35" selection-start-line="83" selection-start-column="35" selection-end-line="83" selection-end-column="35" />
-          <folding />
+        <state relative-caret-position="300">
+          <caret line="47" column="52" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
+          <folding>
+            <element signature="e#1219#1220#0" expanded="true" />
+            <element signature="e#1253#1254#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/App.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/WordsReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-867">
-          <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
-          <folding />
+        <state relative-caret-position="431">
+          <caret line="111" column="7" selection-start-line="111" selection-start-column="7" selection-end-line="111" selection-end-column="7" />
+          <folding>
+            <element signature="e#2890#2891#0" expanded="true" />
+            <element signature="e#2924#2925#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/AppTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/HelpExceptionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        <state relative-caret-position="150">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1305,20 +1376,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/CmdLineParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+        <state relative-caret-position="195">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1434#1450#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thedogdidit/madlib/CmdLineParser.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/PhraseParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
-          <folding />
+        <state relative-caret-position="240">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
+            <element signature="e#465#466#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/PhrasesReaderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#853#854#0" expanded="true" />
+            <element signature="e#946#947#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/WordsReaderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1016#1017#0" expanded="true" />
+            <element signature="e#1108#1109#0" expanded="true" />
+            <element signature="e#1311#1312#0" expanded="true" />
+            <element signature="e#1397#1398#0" expanded="true" />
+            <element signature="e#1434#1435#0" expanded="true" />
+            <element signature="e#1530#1531#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/MadlibTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#795#796#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#914#915#0" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/thedogdidit/madlib/MadlibTestSuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

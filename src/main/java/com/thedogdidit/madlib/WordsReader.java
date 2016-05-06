@@ -26,6 +26,7 @@ class WordsReader {
     private String wordFilePath;
     private final HashMap<String, ArrayList<String>> words = new HashMap<String, ArrayList<String>>();
     private Boolean valid = false;
+    private String reason;
 
 
     /**
@@ -89,6 +90,7 @@ class WordsReader {
         }
         else {
             this.words.clear();
+            this.reason = "Failed to load words from JSON file.";
         }
     }
 
@@ -100,6 +102,16 @@ class WordsReader {
      */
     public Boolean isValid() {
         return this.valid;
+    }
+
+
+    /**
+     * Getter for file action failures.
+     *
+     * @return String containing reason for failure.
+     */
+    public String getReason() {
+        return this.reason;
     }
 
 
@@ -143,16 +155,19 @@ class WordsReader {
         catch (FileNotFoundException e) {
             e.printStackTrace();
             this.words.clear();
+            this.reason = "JSON file not found.";
             return false;
         }
         catch (IOException e) {
             e.printStackTrace();
             this.words.clear();
+            this.reason = "Error reading JSON file.";
             return false;
         }
         catch (ParseException e) {
             e.printStackTrace();
             this.words.clear();
+            this.reason = "Error parsing JSON file.";
             return false;
         }
     }
