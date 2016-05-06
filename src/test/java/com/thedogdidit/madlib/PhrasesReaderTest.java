@@ -1,6 +1,5 @@
 package com.thedogdidit.madlib;
 
-import junit.framework.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -9,12 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.instanceOf;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.*;
 
 /**
  * Test PhrasesReader
  */
-public class PhrasesReaderTest extends TestCase {
+public class PhrasesReaderTest {
     private static PhrasesReader phrsRdr;
 
     @Before
@@ -23,19 +22,19 @@ public class PhrasesReaderTest extends TestCase {
     }
 
     @Test
-    public void testPhrasesReaderType() throws Exception {
+    public void testPhrasesReaderType() {
         assertThat("PhrasesReader is correct type", phrsRdr, instanceOf(PhrasesReader.class));
     }
 
     @Test
-    public void testPhrasesType() throws Exception {
+    public void testPhrasesType() {
         List<String> phr = phrsRdr.phrases();
         List<String> foo = new ArrayList<String>();
         assertEquals(foo, phr);
     }
 
     @Test
-    public void testPhrasesEmpty() throws Exception {
+    public void testPhrasesEmpty() {
         assertTrue("phrsRdr.phrases() should be empty.", phrsRdr.phrases().isEmpty());
     }
 
@@ -46,7 +45,7 @@ public class PhrasesReaderTest extends TestCase {
     }
 
     @Test
-    public void testIsValidBad() throws Exception {
+    public void testIsValidBad() {
         phrsRdr = new PhrasesReader("badname.txt");
         try {
             phrsRdr.process();

@@ -1,18 +1,17 @@
 package com.thedogdidit.madlib;
 
-import junit.framework.TestCase;
+import static org.hamcrest.CoreMatchers.instanceOf;
+import static org.junit.Assert.*;
 import org.junit.Test;
 
-import static org.hamcrest.CoreMatchers.instanceOf;
-import static org.junit.Assert.assertThat;
 
 /**
  * Test custom HelpException
  */
-public class HelpExceptionTest extends TestCase {
+public class HelpExceptionTest {
 
     @Test
-    public void testHelpExceptionType() throws Exception {
+    public void testHelpExceptionType() {
         HelpException exception = new HelpException("exception test");
         assertThat("HelpException is correct type", exception, instanceOf(HelpException.class));
     }

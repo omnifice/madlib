@@ -1,9 +1,5 @@
 package com.thedogdidit.madlib;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
-
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -11,24 +7,21 @@ import java.util.HashMap;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.instanceOf;
+
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 
 
 /**
  * Tests for App
  */
-public class AppTest extends TestCase {
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class, HelpExceptionTest.class, CmdLineParserTest.class, WordsReaderTest.class, PhrasesReaderTest.class, PhraseParserTest.class );
-    }
-
+public class MadlibTest {
 
     // args for most tests.
+    static Madlib madlib;
     private static final String[] args = {
             "-p", "target/test-classes/phrases.txt",
             "-j", "target/test-classes/words.json",
@@ -37,70 +30,75 @@ public class AppTest extends TestCase {
 
 
     /**
-     * Test App
+     * Run before each test.
      */
-    @org.junit.Test
-    public void testAppType() throws Exception {
-        App app = new App();
-        assertThat("App is correct type", app, instanceOf(App.class));
+    @Before
+    public void setUp() {
+        madlib = new Madlib();
     }
 
     /**
-     * Command line is tested in another test class.
+     * Test class type
+     */
+    @Test
+    public void testAppType() {
+        assertThat("App is correct type", madlib, instanceOf(Madlib.class));
+    }
+
+
+    /**
+     * NOTE: Command line is tested in another test class.
      */
 
-    @org.junit.Test
-    public void testGetWords() throws Exception {
-        App ml = new App();
+
+    @Test
+    public void testGetWords() {
         HashMap<String, String> opts;
-        opts = ml.parseCommandLine(args);
+        opts = madlib.parseCommandLine(args);
 
         // Get word list from JSON file.
-        WordsReader wrdReader = ml.getWords(opts.get("j"));
+        WordsReader wrdReader = madlib.getWords(opts.get("j"));
 
         assertFalse("WordReader should contain words.", wrdReader.words().isEmpty());
     }
 
 
-    @org.junit.Test
-    public void testGetPhrases() throws Exception {
-        App ml = new App();
+    @Test
+    public void testGetPhrases() {
         HashMap<String, String> opts;
-        opts = ml.parseCommandLine(args);
+        opts = madlib.parseCommandLine(args);
 
         // Get word list from JSON file.
-        PhrasesReader phraseRdr = ml.getPhrases(opts.get("p"));
+        PhrasesReader phraseRdr = madlib.getPhrases(opts.get("p"));
 
         assertFalse("PhrasesReader should contain phrases.", phraseRdr.phrases().isEmpty());
     }
 
 
-    @org.junit.Test
-    public void testParsePhrases() throws Exception {
-        App ml = new App();
+    @Test
+    public void testParsePhrases() {
         HashMap<String, String> opts;
-        opts = ml.parseCommandLine(args);
+        opts = madlib.parseCommandLine(args);
 
         // Get word list from JSON file.
-        WordsReader wrdReader = ml.getWords(opts.get("j"));
-        PhrasesReader phraseRdr = ml.getPhrases(opts.get("p"));
-        List<String> parsedPhrases = ml.parsePhrases(phraseRdr, wrdReader);
+        WordsReader wrdReader = madlib.getWords(opts.get("j"));
+        PhrasesReader phraseRdr = madlib.getPhrases(opts.get("p"));
+        List<String> parsedPhrases = madlib.parsePhrases(phraseRdr, wrdReader);
 
         assertFalse("parsedPhrases should contain a list of strings.", parsedPhrases.isEmpty());
     }
 
 
-    @org.junit.Test
-    public void testWriteMadlib() throws Exception {
-        App ml = new App();
+    @Test
+    public void testWriteMadlib() {
         HashMap<String, String> opts;
-        opts = ml.parseCommandLine(args);
+        opts = madlib.parseCommandLine(args);
 
         // Get word list from JSON file.
-        WordsReader wrdReader = ml.getWords(opts.get("j"));
-        PhrasesReader phraseRdr = ml.getPhrases(opts.get("p"));
-        List<String> parsedPhrases = ml.parsePhrases(phraseRdr, wrdReader);
-        ml.writeMadlib(opts.get("o"), parsedPhrases);
+        WordsReader wrdReader = madlib.getWords(opts.get("j"));
+        PhrasesReader phraseRdr = madlib.getPhrases(opts.get("p"));
+        List<String> parsedPhrases = madlib.parsePhrases(phraseRdr, wrdReader);
+        madlib.writeMadlib(opts.get("o"), parsedPhrases);
         Path filePath = Paths.get(opts.get("o"));
         Boolean goodPath = (Files.exists(filePath) && Files.isRegularFile(filePath) && Files.isReadable(filePath));
 

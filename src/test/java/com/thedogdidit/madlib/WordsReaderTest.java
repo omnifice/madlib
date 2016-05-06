@@ -1,19 +1,20 @@
 package com.thedogdidit.madlib;
 
-import junit.framework.TestCase;
-import org.junit.Before;
-import org.junit.Test;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import static org.hamcrest.CoreMatchers.instanceOf;
+
+import org.junit.Before;
+import org.junit.Test;
 import static org.junit.Assert.*;
+
 
 /**
  * Test WordsReader
  */
-public class WordsReaderTest extends TestCase {
+public class WordsReaderTest {
     private static WordsReader wordsRedr;
 
     @Before
@@ -31,27 +32,27 @@ public class WordsReaderTest extends TestCase {
     }
 
     @Test
-    public void testWordsReaderTest() throws Exception {
+    public void testWordsReaderTest() {
         assertThat("WordsReaderTest is correct type", wordsRedr, instanceOf(WordsReader.class));
     }
 
     @Test
-    public void testRandomWordNoun() throws Exception {
+    public void testRandomWordNoun() {
         assertEquals("Random word noun", "watermelon", wordsRedr.randomWord("noun"));
     }
 
     @Test
-    public void testRandomWordAdjective() throws Exception {
+    public void testRandomWordAdjective() {
         assertEquals("Random word adjective", "smelly", wordsRedr.randomWord("adjective"));
     }
 
     @Test
-    public void testRandomWordNone() throws Exception {
+    public void testRandomWordNone() {
         assertEquals("Random word none", "none", wordsRedr.randomWord("none"));
     }
 
     @Test
-    public void words() throws Exception {
+    public void words() {
         assertFalse("words should be populated, not empty", wordsRedr.words().isEmpty());
     }
 

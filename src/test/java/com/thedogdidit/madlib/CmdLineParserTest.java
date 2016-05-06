@@ -1,17 +1,17 @@
 package com.thedogdidit.madlib;
 
-import junit.framework.*;
-import org.junit.Before;
-import org.junit.Test;
 import java.util.HashMap;
 
 import static org.hamcrest.CoreMatchers.instanceOf;
-import static org.junit.Assert.assertThat;
+
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  * Test CmdLineParser
  */
-public class CmdLineParserTest extends TestCase {
+public class CmdLineParserTest {
     private static final String[] args = {"-j", "words.json", "-p", "plain.txt", "-o", "outfile.txt"};
     private static CmdLineParser clp;
 
@@ -22,12 +22,12 @@ public class CmdLineParserTest extends TestCase {
 
 
     @Test
-    public void testOptionEmpty() throws Exception {
+    public void testOptionEmpty() {
         assertEquals("Expecting <empty string> arg", "", clp.option("j"));
     }
 
     @Test
-    public void testCmdLineParserType() throws Exception {
+    public void testCmdLineParserType() {
         assertThat("CmdLineParser is correct type", clp, instanceOf(CmdLineParser.class));
     }
 
@@ -45,18 +45,18 @@ public class CmdLineParserTest extends TestCase {
     }
 
     @Test
-    public void testIsValidFalse() throws Exception {
+    public void testIsValidFalse() {
         assertFalse("testIsValid FALSE:", clp.isValid());
     }
 
     @Test
-    public void testOptionsClass() throws Exception {
+    public void testOptionsClass() {
         HashMap<String, String> testObj = new HashMap<String, String>();
         assertEquals("testObj is HashMap", testObj.getClass(), clp.options().getClass());
     }
 
     @Test
-    public void testOptionsEmpty() throws Exception {
+    public void testOptionsEmpty() {
         assertTrue("testObj is empty", clp.options().isEmpty());
     }
 
