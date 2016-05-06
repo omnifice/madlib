@@ -1,0 +1,8 @@
+[
+  {"word": "watermelon", "type": "noun"},
+  {"word": "attack", "type": "verb"},
+  {"word": "smelly", "type": "adjective"},
+  {"word": "123", "type": "number"},
+  {"word": "simply", "type": "adverb"},
+  {"word": "hither", "type": "place"}
+]

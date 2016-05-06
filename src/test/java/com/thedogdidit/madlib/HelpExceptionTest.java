@@ -1,22 +1,34 @@
 package com.thedogdidit.madlib;
 
-import org.junit.After;
-import org.junit.Before;
+import junit.framework.TestCase;
+import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.instanceOf;
+import static org.junit.Assert.assertThat;
 
 /**
- * Created by omnifice on 5/5/16.
+ * Test custom HelpException
  */
-public class HelpExceptionTest {
-    @Before
-    public void setUp() throws Exception {
+public class HelpExceptionTest extends TestCase {
 
+    @Test
+    public void testHelpExceptionType() throws Exception {
+        HelpException exception = new HelpException("exception test");
+        assertThat("HelpException is correct type", exception, instanceOf(HelpException.class));
     }
 
-    @After
-    public void tearDown() throws Exception {
 
+    @Test
+    public void testHelpException() {
+        try {
+            causeHelpException();
+        }
+        catch (HelpException e) {
+            assertEquals("Got test HelpException", "test HelpException", e.getMessage());
+        }
     }
 
+    private void causeHelpException() throws HelpException {
+        throw new HelpException("test HelpException");
+    }
 }
