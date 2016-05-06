@@ -3,6 +3,7 @@ package com.thedogdidit.madlib;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -61,4 +62,16 @@ public class PhrasesReaderTest {
         assertTrue("isValid should be true", phrsRdr.isValid());
     }
 
+    @Test
+    public void testGetReasonFileNotFound() throws Exception {
+        phrsRdr = new PhrasesReader("src/test/resources/not_found.txt");
+        try {
+            phrsRdr.process();
+        }
+        catch (FileNotFoundException e) {
+            //e.printStackTrace();
+        }
+
+        assertEquals("Should be 'Phrases plain text file not found or unreadable.'", "Phrases plain text file not found or unreadable.", phrsRdr.getReason());
+    }
 }

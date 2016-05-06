@@ -178,7 +178,7 @@ class Madlib {
     /**
      * Celebrate. W00T! W00T! ;)
      */
-    private void celebrate() {
+    void celebrate() {
         System.out.println("\nEnjoy your madlib! :)");
     }
 

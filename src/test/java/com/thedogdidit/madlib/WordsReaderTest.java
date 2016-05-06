@@ -25,7 +25,6 @@ public class WordsReaderTest {
             assertTrue("WordsReader should now be valid.", wordsRedr.isValid());
         }
         catch (FileNotFoundException e) {
-            // Shouldn't be here.
             System.err.println("WordsReaderTest caught process() file error.");
             e.printStackTrace();
         }
@@ -58,7 +57,7 @@ public class WordsReaderTest {
 
 
     @Test
-    public void testProcessBadFile() throws Exception {
+    public void testProcessBadFile() {
         WordsReader badWordsRedr = new WordsReader("foo.json");
         try {
             badWordsRedr.process();
@@ -69,12 +68,43 @@ public class WordsReaderTest {
     }
 
     @Test
-    public void testProcess() throws Exception {
+    public void testProcess() {
         assertFalse("WordsReader should now be valid.", wordsRedr.words().isEmpty());
     }
 
     @Test
-    public void isValid() throws Exception {
+    public void testIsValid() {
         assertTrue("isValid should be true.", wordsRedr.isValid());
+    }
+
+    @Test
+    public void testGetReason() {
+        assertEquals("Should be null.", null, wordsRedr.getReason());
+    }
+
+    @Test
+    public void testGetReasonFileNotFound() throws Exception {
+        wordsRedr = new WordsReader("src/test/resources/not_found.json");
+        try {
+            wordsRedr.process();
+        }
+        catch (FileNotFoundException e) {
+            //e.printStackTrace();
+        }
+
+        assertEquals("Should be 'JSON file not found.'", "JSON file not found.", wordsRedr.getReason());
+    }
+
+    @Test
+    public void testGetReasonFileBadJSON() throws Exception {
+        wordsRedr = new WordsReader("src/test/resources/words_bad.json");
+        try {
+            wordsRedr.process();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        assertEquals("Should be 'Failed to load words from JSON file.'", "Failed to load words from JSON file.", wordsRedr.getReason());
     }
 }

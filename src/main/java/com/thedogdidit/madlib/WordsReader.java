@@ -81,6 +81,7 @@ class WordsReader {
             this.wordFilePath = fWord.getAbsolutePath();
         }
         else {
+            this.reason = "JSON file not found.";
             throw new FileNotFoundException();
         }
 
@@ -155,19 +156,16 @@ class WordsReader {
         catch (FileNotFoundException e) {
             e.printStackTrace();
             this.words.clear();
-            this.reason = "JSON file not found.";
             return false;
         }
         catch (IOException e) {
             e.printStackTrace();
             this.words.clear();
-            this.reason = "Error reading JSON file.";
             return false;
         }
         catch (ParseException e) {
             e.printStackTrace();
             this.words.clear();
-            this.reason = "Error parsing JSON file.";
             return false;
         }
     }

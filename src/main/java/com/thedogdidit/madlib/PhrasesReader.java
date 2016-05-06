@@ -66,7 +66,7 @@ class PhrasesReader {
             this.textFilePath = path;
         }
         else {
-            this.reason = "Phrases plain text file not found."; // Yeah, redundant...
+            this.reason = "Phrases plain text file not found or unreadable."; // Yeah, redundant...
             throw new FileNotFoundException();
         }
 
@@ -101,8 +101,8 @@ class PhrasesReader {
             this.phrases = Files.readAllLines(this.textFilePath, ENCODING);
         }
         catch (IOException e) {
-            this.reason = "Error reading phrases plain text file.";
             e.printStackTrace();
+            this.reason = "Error reading phrases plain text file.";
             return false;
         }
 

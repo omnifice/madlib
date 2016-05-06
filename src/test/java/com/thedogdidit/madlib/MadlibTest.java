@@ -1,5 +1,7 @@
 package com.thedogdidit.madlib;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -7,12 +9,10 @@ import java.util.HashMap;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.instanceOf;
+import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
 
 
 /**
@@ -103,5 +103,15 @@ public class MadlibTest {
         Boolean goodPath = (Files.exists(filePath) && Files.isRegularFile(filePath) && Files.isReadable(filePath));
 
         assertTrue("Output file should exits, be a regular file, and be readable.", goodPath);
+    }
+
+
+    @Test
+    public void testCelebrate() {
+        String nl = System.getProperty("line.separator");
+        final ByteArrayOutputStream output = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(output));
+        madlib.celebrate();
+        assertEquals("Celebrate string should match \nEnjoy your madlib! :)\n", "\nEnjoy your madlib! :)\n", output.toString());
     }
 }
