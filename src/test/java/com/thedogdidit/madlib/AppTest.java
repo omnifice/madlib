@@ -46,34 +46,8 @@ public class AppTest extends TestCase {
     }
 
     /**
-     * Command line -h is tested in another test class.
+     * Command line is tested in another test class.
      */
-
-    @org.junit.Test
-    public void testParseCommandLine() throws Exception {
-        App ml = new App();
-        HashMap<String, String> opts;
-        opts = ml.parseCommandLine(args);
-
-        assertEquals("Should be HashMap with 3 keys.", 3, opts.size());
-    }
-
-
-    @org.junit.Test
-    public void testParseCommandLineLong() throws Exception {
-        String[] args = {
-                "--plaintext", "target/test-classes/phrases.txt",
-                "--json", "target/test-classes/words.json",
-                "--outfile", "target/test-classes/outfile.txt"
-        };
-
-        App ml = new App();
-        HashMap<String, String> opts;
-        opts = ml.parseCommandLine(args);
-
-        assertEquals("Should be HashMap with 3 long keys.", 3, opts.size());
-    }
-
 
     @org.junit.Test
     public void testGetWords() throws Exception {
