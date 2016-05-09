@@ -22,20 +22,20 @@ public class CmdLineParserTest {
 
 
     @Test
-    public void testOptionEmpty() {
-        assertEquals("Expecting <empty string> arg", "", clp.option("j"));
+    public void testCmdLineParserType() {
+        assertThat("CmdLineParser is correct type", clp, instanceOf(CmdLineParser.class));
     }
 
     @Test
-    public void testCmdLineParserType() {
-        assertThat("CmdLineParser is correct type", clp, instanceOf(CmdLineParser.class));
+    public void testOptionEmpty() {
+        assertEquals("Expecting <empty string> arg", "", clp.option("j"));
     }
 
     @Test
     public void testOption() throws Exception {
         clp.parse();
         String foo = "";
-        assertEquals("Expecting string", foo.getClass(), clp.option("j").getClass());
+        assertEquals("Expecting String class", foo.getClass(), clp.option("j").getClass());
     }
 
     @Test

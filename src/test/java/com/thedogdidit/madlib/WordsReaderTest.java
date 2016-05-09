@@ -98,11 +98,12 @@ public class WordsReaderTest {
     @Test
     public void testGetReasonFileBadJSON() throws Exception {
         wordsRedr = new WordsReader("src/test/resources/words_bad.json");
+        System.err.println("NOTE: You should see a stack trace.");
         try {
             wordsRedr.process();
         }
         catch (Exception e) {
-            e.printStackTrace();
+            //e.printStackTrace();
         }
 
         assertEquals("Should be 'Failed to load words from JSON file.'", "Failed to load words from JSON file.", wordsRedr.getReason());

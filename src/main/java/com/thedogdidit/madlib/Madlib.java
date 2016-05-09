@@ -1,5 +1,6 @@
 package com.thedogdidit.madlib;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -7,6 +8,9 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import static org.apache.commons.io.FilenameUtils.*;
+
+
 
 /**
  * Madlib
@@ -157,19 +161,43 @@ class Madlib {
      */
     void writeMadlib(String fileName, List<String> parsedPhrases) {
         // Write the output plain text file.
-        // NOTE- Overwrite existing file...not bothering to check for existance, currently.
-        // I know this is unfriendly, but...
-        // TODO...make more friendly for overwrite/abort.
+        //
+        // Check for existing file. If it exists, try adding a (n) to the file name until filename(n) is not in
+        // existence.
+        String finalFileName = null;
+        File fOut = new File(fileName);
+
+        if (fOut.exists()) {
+            String absPath = fOut.getAbsolutePath();
+            String fullPath = getFullPath(absPath);
+            String baseName = getBaseName(absPath);
+            String ext = getExtension(absPath);
+            int i = 1;
+            Boolean badFile = true;
+            while (badFile) {
+                String tmpName = baseName + "(" + i + ")" + ((!ext.equals("")) ? "." + ext : "");
+                File tryName = new File(fullPath + File.separator + tmpName);
+                if (! tryName.exists()) {
+                    finalFileName = tryName.toString();
+                    badFile = false;
+                }
+                i++;
+            }
+        }
+        else {
+            finalFileName = fileName;
+        }
+
         try {
             //noinspection Since15
-            Files.write(Paths.get(fileName), parsedPhrases);
+            Files.write(Paths.get(finalFileName), parsedPhrases);
         }
         catch (IOException e) {
-            System.err.println("Error writing to file " + fileName + ". I give up. Sorry. :(");
+            System.err.println("Error writing to file " + finalFileName + ". I give up. Sorry. :(");
             exit(1);
         }
 
-        System.out.println("Output file " + fileName + " written.");
+        System.out.println("Output file " + finalFileName + " written.");
     }
 
 

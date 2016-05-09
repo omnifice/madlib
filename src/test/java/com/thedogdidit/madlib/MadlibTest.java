@@ -1,6 +1,7 @@
 package com.thedogdidit.madlib;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.PrintStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -8,6 +9,9 @@ import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
 
+import static org.apache.commons.io.FilenameUtils.getBaseName;
+import static org.apache.commons.io.FilenameUtils.getExtension;
+import static org.apache.commons.io.FilenameUtils.getFullPath;
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.junit.Assert.*;
 
@@ -102,7 +106,30 @@ public class MadlibTest {
         Path filePath = Paths.get(opts.get("o"));
         Boolean goodPath = (Files.exists(filePath) && Files.isRegularFile(filePath) && Files.isReadable(filePath));
 
-        assertTrue("Output file should exits, be a regular file, and be readable.", goodPath);
+        assertTrue("Output file should exist, be a regular file, and be readable.", goodPath);
+    }
+
+
+    @Test
+    public void testWriteMadlibNoOverwrite() {
+        HashMap<String, String> opts;
+        opts = madlib.parseCommandLine(args);
+
+        // Get word list from JSON file.
+        WordsReader wrdReader = madlib.getWords(opts.get("j"));
+        PhrasesReader phraseRdr = madlib.getPhrases(opts.get("p"));
+        List<String> parsedPhrases = madlib.parsePhrases(phraseRdr, wrdReader);
+        madlib.writeMadlib(opts.get("o"), parsedPhrases);
+
+        String filePath = Paths.get(opts.get("o")).toString();
+        String fullPath = getFullPath(filePath);
+        String baseName = getBaseName(filePath);
+        String ext = getExtension(filePath);
+        String newFile = fullPath + File.separator + baseName + ((!ext.equals("")) ? "." + ext : "");
+        Path newPath = Paths.get(newFile);
+        Boolean goodPath = (Files.exists(newPath) && Files.isRegularFile(newPath) && Files.isReadable(newPath));
+
+        assertTrue("Output file should not be overwritten, but be names file(n), be a regular file, and be readable.", goodPath);
     }
 
 
