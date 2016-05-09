@@ -42,6 +42,8 @@ class PhraseParser {
             Matcher matcher = pattern.matcher(line);
             StringBuffer sb = new StringBuffer();
 
+            // TODO: Revisit this and possibly add the ability to track used words so as not to duplicate them in the
+            // TODO: phrases...would need to probably reuse anyway if no more available for the number of tokens given.
             while (matcher.find()) {
                 matcher.appendReplacement(sb, wrdRdr.randomWord(matcher.group(1)));
             }
