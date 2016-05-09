@@ -218,7 +218,8 @@ class Madlib {
      * @param code Desired code to pass to System.exit();
      */
     private static void exit(int code) {
-        System.out.println("Exiting...");
+        // And cleanup, whatever...
+        // System.out.println("Exiting...");  //???
         System.exit(code);
     }
 }
