@@ -25,7 +25,7 @@ import org.junit.Test;
 public class MadlibTest {
 
     // args for most tests.
-    static Madlib madlib;
+    private static Madlib madlib;
     private static final String[] args = {
             "-p", "target/test-classes/phrases.txt",
             "-j", "target/test-classes/words.json",
@@ -139,6 +139,7 @@ public class MadlibTest {
         final ByteArrayOutputStream output = new ByteArrayOutputStream();
         System.setOut(new PrintStream(output));
         madlib.celebrate();
-        assertEquals("Celebrate string should match \nEnjoy your madlib! :)\n", "\nEnjoy your madlib! :)\n", output.toString());
+        //assertEquals("Celebrate string should match \nEnjoy your madlib! :)\n", "\nEnjoy your madlib! :)\n", output.toString());
+        assertEquals("Celebrate string should match <system_line_seperator>Enjoy your madlib! :)<system_line_separator>", nl + "Enjoy your madlib! :)" + nl, output.toString());
     }
 }

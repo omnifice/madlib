@@ -51,7 +51,7 @@ public class CmdLineParserTest {
 
     @Test
     public void testOptionsClass() {
-        HashMap<String, String> testObj = new HashMap<String, String>();
+        HashMap<String, String> testObj = new HashMap<>();
         assertEquals("testObj is HashMap", testObj.getClass(), clp.options().getClass());
     }
 

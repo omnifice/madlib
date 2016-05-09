@@ -11,7 +11,7 @@ import java.util.HashMap;
  class CmdLineParser {
     private String[] args = null;
     private final Options cfgOpts = new Options();
-    private final HashMap<String, String> parsedOpts = new HashMap<String, String>();
+    private final HashMap<String, String> parsedOpts = new HashMap<>();
     private Boolean valid = false;
 
 

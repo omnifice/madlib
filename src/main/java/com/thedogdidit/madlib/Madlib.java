@@ -139,7 +139,7 @@ class Madlib {
      */
     List<String> parsePhrases(PhrasesReader phraseRdr, WordsReader wrdRdr) {
         List<String> phrases = phraseRdr.phrases();
-        List<String> parsedPhrases = new ArrayList<String>();
+        List<String> parsedPhrases = new ArrayList<>();
         if (!phraseRdr.isValid()) {
             System.err.println("Error reading phrases file.");
             exit(1);
@@ -207,7 +207,8 @@ class Madlib {
      * Celebrate. W00T! W00T! ;)
      */
     void celebrate() {
-        System.out.println("\nEnjoy your madlib! :)");
+        String nl = System.getProperty("line.separator");
+        System.out.println(nl + "Enjoy your madlib! :)");
     }
 
 

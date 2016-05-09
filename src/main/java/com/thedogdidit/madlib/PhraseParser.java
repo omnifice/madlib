@@ -30,7 +30,7 @@ class PhraseParser {
      * @return Parsed List<String> of phrases.
      */
     public List<String> parsePhrases(List<String> phrases, WordsReader wrdRdr) {
-        List<String> parsedPhrases = new ArrayList<String>();
+        List<String> parsedPhrases = new ArrayList<>();
         Pattern pattern = Pattern.compile("\\[(.+?)\\]");
 
         if (! wrdRdr.isValid()) {

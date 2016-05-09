@@ -30,7 +30,7 @@ public class PhrasesReaderTest {
     @Test
     public void testPhrasesType() {
         List<String> phr = phrsRdr.phrases();
-        List<String> foo = new ArrayList<String>();
+        List<String> foo = new ArrayList<>();
         assertEquals(foo, phr);
     }
 

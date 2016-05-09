@@ -15,7 +15,7 @@ import java.util.List;
  */
 class PhrasesReader {
     private final String textFile;
-    private List<String> phrases = new ArrayList<String>();
+    private List<String> phrases = new ArrayList<>();
     private Boolean valid = false;
     private final static Charset ENCODING = StandardCharsets.UTF_8;
     private Path textFilePath;

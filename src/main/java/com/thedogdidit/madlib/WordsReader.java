@@ -24,7 +24,7 @@ import org.json.simple.parser.ParseException;
 class WordsReader {
     private final String wordFile;
     private String wordFilePath;
-    private final HashMap<String, ArrayList<String>> words = new HashMap<String, ArrayList<String>>();
+    private final HashMap<String, ArrayList<String>> words = new HashMap<>();
     private Boolean valid = false;
     private String reason;
 
@@ -144,7 +144,7 @@ class WordsReader {
                     }
                     else {
                         // TODO: Gotta be a better way to do this...look into...
-                        ArrayList<String> aryLst = new ArrayList<String>();
+                        ArrayList<String> aryLst = new ArrayList<>();
                         aryLst.add(word);
                         words.put(type, aryLst);
                     }

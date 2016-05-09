@@ -29,7 +29,7 @@ public class PhraseParserTest {
 
     @Test
     public void testParsePhrases() {
-        List<String> aryLst = new ArrayList<String>();
+        List<String> aryLst = new ArrayList<>();
         WordsReader wrdRedr = new WordsReader("src/test/resources/words.json");
         PhrasesReader phrsRedr = new PhrasesReader("src/test/resources/phrases.txt");
         List<String> phrases = phrsRedr.phrases();
