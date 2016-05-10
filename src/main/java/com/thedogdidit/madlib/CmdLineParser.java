@@ -28,6 +28,8 @@ import java.util.HashMap;
         cfgOpts.addOption("j", "json", true, "Input file containing a JSON array of words.");
         cfgOpts.addOption("p", "plaintext", true, "Input file containing plain text sentences and appropriate tokens.");
         cfgOpts.addOption("o", "output", true, "Output file for writing resulting MadLib to.");
+        // TODO: Could probably add a couple option, one to be with silent System.out stuff, and one to overwrite the
+        // TODO... current output file, should it exist, now that I don't overwrite it. *sigh* I'll never be done... :)
     }
 
 
