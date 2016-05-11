@@ -27,7 +27,8 @@ import static org.apache.commons.io.FilenameUtils.*;
  *                          - Phrases containing tokens matching typ in JSON words, e.g: [name] wants a new [noun].
  *                          - There is a file in src/main/resources/phrases.txt for using with command line options in build/run
  *      -o,--output      output_file.txt
- *                          - Name of the file for output of parsed results. NOTE - WILL BE OVERWRITTEN if exists.
+ *                          - Name of the file for output of parsed results. If file exits, attempts to name as
+ *                            output_file(1).txt, output_file(2).txt, etc., will be made.
  *      -h,--help        Display help
  *
  */
